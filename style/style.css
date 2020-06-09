@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100vh;
+}
+
+.title {
+    position: absolute;
+    top: 75px;
+    left: 100px;
+    font-size: 50px;
+    z-index: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.search-container {
+    width: 360px;
+    height: 44px;
+    background-color: #454e53;
+    position: absolute;
+    z-index: 30;
+    top: 160px;
+    left: 100px;
+    border-radius: 30px;
+}
+
+.search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search input {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search i {
+    font-size: 20px;
+    color: white;
+}
+
+.stores-list-container {
+    width: 360px;
+    background-color: white;
+    background-image: linear-gradient(to bottom right, white, #f1f1f1, #ccc);
+    position: absolute;
+    z-index: 30;
+    top: 240px;
+    left: 100px;
+    border-radius: 30px;
+    bottom: 20px;
+    box-shadow: -3px 6px 12px #ccc;
+}
+
+.stores-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.store-container {
+    display: flex;
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+}
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-address {
+    font-size: 15px;
+    /* color: #514C4C; */
+    margin-top: 15px;
+}
+
+.store-phone-number {
+    color: #B5ADAD;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.store-number-container {
+    align-items: center;
+    display: flex;
+}
+
+.store-number {
+    width: 30px;
+    height: 30px;
+    background-color: #454E53;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out;
+}
+
+.store-address span {
+    display: block;
+}
+
+.store-info-window {
+    min-width: 250px;
+    font-size: 14px;
+    padding:8px;
+}
+
+.store-info-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.store-info-status {
+    margin-top: 6px;
+    border-bottom: 1px solid #00000029;
+    padding-bottom: 6px;
+}
+
+.store-info-address, .store-info-phone {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.store-info-address a {
+    color: #333;
+    text-decoration: none;
+}
+
+.store-info-address .circle, .store-info-phone .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #454E53;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.store-container-background {
+    width: 100%;
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 18px;
+    transition: background 0.2s ease-in-out;
+}
+
+.store-container-background:hover {
+    /* background-color: #ccc; */
+    background-color: #6a6b6b;
+    color: #fff !important;
+}
+
+.store-container-background:hover > div > .store-number {
+    background-color: #080000 !important;
+    color: #ffffff !important;
+    border: 2px solid #fff;
+    width: 25px;
+    height: 25px;
+}
+@media (max-width: 767px) {
+    #map {
+        height: 60vh;
+    }
+
+    .title {
+        position: absolute;
+        top: 75px;
+        left: 100px;
+        font-size: 35px;
+        z-index: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333333;
+    }
+    
+    .search-container {
+        width: 360px;
+        height: 44px;
+        background-color: #454e53;
+        position: absolute;
+        z-index: 30;
+        top: 100px;
+        left: 100px;
+        border-radius: 30px;
+    }
+    
+    .search {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .search input {
+        width: 100%;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        color: white;
+    }
+    
+    .search input:focus {
+        outline: none;
+    }
+    
+    .search i {
+        font-size: 20px;
+        color: white;
+    }
+}
